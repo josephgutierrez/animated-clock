@@ -1,0 +1,329 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: radial-gradient(circle, black 35%, grey 60%, white 90%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Century Gothic";
+  white-space: nowrap;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: teal;
+  border-radius: 50%;
+}
+
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  padding: 5px;
+  background-color: black;
+  opacity: 
+  font-size: 0;
+  border-radius: 5px;
+}
+
+
+.hours,
+.minutes,
+.seconds {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin: 5px;
+  background-color: black;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 120px;
+  font-size: 0;
+}
+
+.evolving-number {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 120px;
+}
+
+.bar-one,
+.bar-two,
+.bar-three,
+.bar-four,
+.bar-five {
+  position: absolute;
+  width: 7px;
+  height: 65px;
+  border-radius: 50px;
+  transition: .5s ease-in;
+  background-color: teal;
+}
+
+/* number one */
+.bar-one.one,
+.bar-two.one,
+.bar-three.one,
+.bar-four.one,
+.bar-five.one {
+  transform: translateX(22px) translateY(28px);
+}
+
+.bar-two.one,
+.bar-three.one,
+.bar-four.one,
+.bar-five.one {
+  opacity: 0;
+}
+
+/* number two */
+.bar-one.two {
+  transform: translate(22px, 10px) rotate(-90deg);
+  height: 40px;
+}
+
+.bar-two.two {
+  transform: translate(22px, 70px) rotate(-90deg);
+  height: 40px;
+}
+
+.bar-three.two {
+  transform: translate(22px, 40px) rotate(-90deg);
+  height: 40px;
+}
+
+.bar-four.two {
+  transform: translate(39px, 27px);
+  height: 36px;
+}
+
+.bar-five.two {
+  transform: translate(5px, 57px);
+  height: 36px;
+}
+
+/* number three */
+.bar-one.three {
+  transform: translate(22px, 40px) rotate(-90deg);
+  height: 40px;
+}
+
+.bar-two.three {
+  transform: translate(39px, 57px);
+  height: 36px;
+}
+
+.bar-three.three {
+  transform: translate(39px, 27px);
+  height: 36px;
+}
+
+.bar-four.three {
+  transform: translate(22px, 10px) rotate(90deg);
+  height: 40px;
+}
+
+.bar-five.three {
+  transform: translate(22px, 70px) rotate(90deg);
+  height: 40px;
+}
+
+/* number four */
+.bar-one.four {
+  transform: translate(22px, 70px) rotate(-90deg);
+  height: 40px;  
+  opacity: 0;
+}
+
+.bar-two.four {
+  transform: translate(39px, 27px);
+  height: 36px;
+}
+
+.bar-three.four {
+  transform: translate(22px, 40px) rotate(90deg);
+  height: 40px; 
+}
+
+.bar-four.four {
+  transform: translate(5px, 27px) rotate(180deg);
+  height: 36px;
+}
+
+.bar-five.four {
+  transform: translate(39px, 57px) rotate(180deg);
+  height: 36px; 
+}
+
+/* number five */
+.bar-one.five {
+  transform: translate(39px, 57px) rotate(0deg);
+  height: 36px; 
+}
+
+.bar-two.five {
+  transform: translate(22px, 10px) rotate(90deg);
+  height: 40px;  
+}
+
+.bar-three.five {
+  transform: translate(5px, 27px) rotate(180deg);
+  height: 36px;
+}
+
+.bar-four.five {
+  transform: translate(22px, 40px) rotate(270deg);
+  height: 40px;
+}
+
+.bar-five.five {
+  transform: translate(22px, 70px) rotate(-90deg);
+  height: 40px;
+}
+
+/* number six */
+.bar-one.six {
+  transform: translate(5px, 27px);
+  height: 65px;  
+}
+
+.bar-two.six {
+  transform: translate(22px, 40px) rotate(270deg);
+  height: 40px;
+}
+
+.bar-three.six {
+  transform: translate(39px, 57px) rotate(0deg);
+  height: 36px; 
+}
+
+.bar-four.six {
+  transform: translate(22px, 70px) rotate(90deg);
+  height: 40px;
+}
+
+.bar-five.six {
+  transform: translate(22px, 10px) rotate(90deg);
+  height: 40px;  
+}
+
+/* number seven */
+.bar-one.seven {
+  transform: translate(22px, 10px) rotate(90deg);
+  height: 40px; 
+}
+
+.bar-two.seven {
+  transform: translate(22px, 70px) rotate(90deg);
+  height: 40px;
+  opacity: 0;  
+}
+
+.bar-three.seven {
+  transform: translate(22px, 70px) rotate(-90deg);
+  height: 40px;
+  opacity: 0;  
+}
+
+.bar-four.seven {
+  transform: translate(39px, 27px) rotate(180deg);
+  height: 65px;
+}
+
+.bar-five.seven {
+  transform: translate(22px, 70px) rotate(270deg);
+  height: 40px;
+  opacity: 0;
+}
+
+/* number eight */
+.bar-one.eight {
+  transform: translate(39px, 27px) rotate(180deg);
+  height: 65px;
+}
+
+.bar-two.eight {
+  transform: translate(5px, 27px);
+  height: 65px; 
+}
+
+.bar-three.eight {
+  transform: translate(22px, 10px) rotate(90deg);
+  height: 40px;   
+}
+
+.bar-four.eight {
+  transform: translate(22px, 40px) rotate(90deg);
+  height: 40px;
+}
+
+.bar-five.eight {
+  transform: translate(22px, 70px) rotate(-270deg);
+  height: 40px;
+}
+
+/* number nine */
+.bar-one.nine {
+  transform: translate(5px, 27px) rotate(-180deg);
+  height: 36px;
+}
+
+.bar-two.nine {
+  transform: translate(22px, 40px) rotate(90deg);
+  height: 40px;  
+}
+
+.bar-three.nine {
+  transform: translate(22px, 70px) rotate(-90deg);
+  height: 40px;
+  opacity: 0; 
+}
+
+.bar-four.nine {
+  transform: translate(22px, 10px) rotate(-90deg);
+  height: 40px;
+}
+
+.bar-five.nine {
+  transform: translate(39px, 27px) rotate(-180deg);
+  height: 65px;  
+}
+
+/* number zero */
+.bar-one.zero {
+  transform: translate(22px, 70px) rotate(-270deg);
+  height: 40px;
+}
+
+.bar-two.zero {
+  transform: translate(39px, 27px) rotate(180deg);
+  height: 65px;  
+}
+
+.bar-three.zero {
+ transform: translate(21px, 27px) rotate(26deg);
+ height: 69px; 
+}
+
+.bar-four.zero {
+  transform: translate(5px, 27px);
+  height: 65px; 
+}
+
+.bar-five.zero {
+  transform: translate(22px, 10px) rotate(-90deg);
+  height: 40px;
+}
+
+@media (max-width: 800px) {
+  .hours,
+  .minutes,
+  .seconds {
+    margin: 0px;
+  }
+}
