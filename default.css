@@ -2,7 +2,7 @@
   width: 100%;
   height: 100vh;
   position: relative;
-  background: radial-gradient(circle, black 35%, grey 60%, white 90%);
+  background: radial-gradient(circle, black 35%, grey 70%, white 95%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,7 +25,6 @@
   transform: translateY(-50%) translateX(-50%);
   padding: 5px;
   background-color: black;
-  opacity: 
   font-size: 0;
   border-radius: 5px;
 }
@@ -41,7 +40,6 @@
   background-color: black;
   text-align: center;
   vertical-align: middle;
-  line-height: 120px;
   font-size: 0;
 }
 
@@ -59,7 +57,8 @@
 .bar-five {
   position: absolute;
   width: 7px;
-  height: 65px;
+  height: 40px;
+  transform: translate(23px, 35px)rotate(90deg);
   border-radius: 50px;
   transition: .5s ease-in;
   background-color: teal;
@@ -71,7 +70,8 @@
 .bar-three.one,
 .bar-four.one,
 .bar-five.one {
-  transform: translateX(22px) translateY(28px);
+  height: 65px;
+  transform: translate(22px, 28px);
 }
 
 .bar-two.one,
@@ -136,7 +136,7 @@
 /* number four */
 .bar-one.four {
   transform: translate(22px, 70px) rotate(-90deg);
-  height: 40px;  
+  height: 40px;
   opacity: 0;
 }
 
@@ -147,7 +147,7 @@
 
 .bar-three.four {
   transform: translate(22px, 40px) rotate(90deg);
-  height: 40px; 
+  height: 40px;
 }
 
 .bar-four.four {
@@ -157,18 +157,18 @@
 
 .bar-five.four {
   transform: translate(39px, 57px) rotate(180deg);
-  height: 36px; 
+  height: 36px;
 }
 
 /* number five */
 .bar-one.five {
   transform: translate(39px, 57px) rotate(0deg);
-  height: 36px; 
+  height: 36px;
 }
 
 .bar-two.five {
   transform: translate(22px, 10px) rotate(90deg);
-  height: 40px;  
+  height: 40px;
 }
 
 .bar-three.five {
@@ -189,7 +189,7 @@
 /* number six */
 .bar-one.six {
   transform: translate(5px, 27px);
-  height: 65px;  
+  height: 65px;
 }
 
 .bar-two.six {
@@ -199,7 +199,7 @@
 
 .bar-three.six {
   transform: translate(39px, 57px) rotate(0deg);
-  height: 36px; 
+  height: 36px;
 }
 
 .bar-four.six {
@@ -209,25 +209,25 @@
 
 .bar-five.six {
   transform: translate(22px, 10px) rotate(90deg);
-  height: 40px;  
+  height: 40px;
 }
 
 /* number seven */
 .bar-one.seven {
   transform: translate(22px, 10px) rotate(90deg);
-  height: 40px; 
+  height: 40px;
 }
 
 .bar-two.seven {
   transform: translate(22px, 70px) rotate(90deg);
   height: 40px;
-  opacity: 0;  
+  opacity: 0;
 }
 
 .bar-three.seven {
   transform: translate(22px, 70px) rotate(-90deg);
   height: 40px;
-  opacity: 0;  
+  opacity: 0;
 }
 
 .bar-four.seven {
@@ -249,12 +249,12 @@
 
 .bar-two.eight {
   transform: translate(5px, 27px);
-  height: 65px; 
+  height: 65px;
 }
 
 .bar-three.eight {
   transform: translate(22px, 10px) rotate(90deg);
-  height: 40px;   
+  height: 40px;
 }
 
 .bar-four.eight {
@@ -275,13 +275,13 @@
 
 .bar-two.nine {
   transform: translate(22px, 40px) rotate(90deg);
-  height: 40px;  
+  height: 40px;
 }
 
 .bar-three.nine {
   transform: translate(22px, 70px) rotate(-90deg);
   height: 40px;
-  opacity: 0; 
+  opacity: 0;
 }
 
 .bar-four.nine {
@@ -291,7 +291,7 @@
 
 .bar-five.nine {
   transform: translate(39px, 27px) rotate(-180deg);
-  height: 65px;  
+  height: 65px;
 }
 
 /* number zero */
@@ -302,17 +302,17 @@
 
 .bar-two.zero {
   transform: translate(39px, 27px) rotate(180deg);
-  height: 65px;  
+  height: 65px;
 }
 
 .bar-three.zero {
  transform: translate(21px, 27px) rotate(26deg);
- height: 69px; 
+ height: 69px;
 }
 
 .bar-four.zero {
   transform: translate(5px, 27px);
-  height: 65px; 
+  height: 65px;
 }
 
 .bar-five.zero {
@@ -325,5 +325,8 @@
   .minutes,
   .seconds {
     margin: 0px;
+  }
+  .container {
+      background: radial-gradient(circle, black 50%, grey 80%, white 100%);
   }
 }
