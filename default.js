@@ -54,7 +54,7 @@ function makeFour(num) {
   barFour[num].classList.add("four")
   barFour[num].classList.remove("one", "two", "three", "five", "six", "seven", "eight", "nine", "zero")
   barFive[num].classList.add("four")
-  barFive[num].classList.remove("one", "two", "three", "five", "six", "seven", "eight", "nine", "zero")  
+  barFive[num].classList.remove("one", "two", "three", "five", "six", "seven", "eight", "nine", "zero")
 }
 
 function makeFive(num) {
@@ -80,7 +80,7 @@ function makeSix(num) {
   barFour[num].classList.add("six")
   barFour[num].classList.remove("one", "two", "three", "four", "five", "seven", "eight", "nine", "zero")
   barFive[num].classList.add("six")
-  barFive[num].classList.remove("one", "two", "three", "four", "five", "seven", "eight", "nine", "zero")  
+  barFive[num].classList.remove("one", "two", "three", "four", "five", "seven", "eight", "nine", "zero")
 }
 
 function makeSeven(num) {
@@ -93,7 +93,7 @@ function makeSeven(num) {
   barFour[num].classList.add("seven")
   barFour[num].classList.remove("one", "two", "three", "four", "five", "six", "eight", "nine", "zero")
   barFive[num].classList.add("seven")
-  barFive[num].classList.remove("one", "two", "three", "four", "five", "six", "eight", "nine", "zero")  
+  barFive[num].classList.remove("one", "two", "three", "four", "five", "six", "eight", "nine", "zero")
 }
 
 function makeEight(num) {
@@ -106,7 +106,7 @@ function makeEight(num) {
   barFour[num].classList.add("eight")
   barFour[num].classList.remove("one", "two", "three", "four", "five", "six", "seven", "nine", "zero")
   barFive[num].classList.add("eight")
-  barFive[num].classList.remove("one", "two", "three", "four", "five", "six", "seven", "nine", "zero")  
+  barFive[num].classList.remove("one", "two", "three", "four", "five", "six", "seven", "nine", "zero")
 }
 
 function makeNine(num) {
@@ -119,7 +119,7 @@ function makeNine(num) {
   barFour[num].classList.add("nine")
   barFour[num].classList.remove("one", "two", "three", "four", "five", "six", "seven", "eight", "zero")
   barFive[num].classList.add("nine")
-  barFive[num].classList.remove("one", "two", "three", "four", "five", "six", "seven", "eight", "zero")  
+  barFive[num].classList.remove("one", "two", "three", "four", "five", "six", "seven", "eight", "zero")
 }
 
 function makeZero(num) {
@@ -132,7 +132,7 @@ function makeZero(num) {
   barFour[num].classList.add("zero")
   barFour[num].classList.remove("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
   barFive[num].classList.add("zero")
-  barFive[num].classList.remove("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")  
+  barFive[num].classList.remove("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
 }
 
 const hours = document.querySelector(".hours")
@@ -146,7 +146,7 @@ function clockTime() {
   let currentMinute = currentTime.getMinutes()
   let currentSecond = currentTime.getSeconds()
   // console.log(currentHour + ":" + currentMinute + ":" + currentSecond)
-  
+
   switch(currentHour) {
     case 0:
       makeZero(0);
@@ -157,7 +157,7 @@ function clockTime() {
       makeOne(1);
       break;
     case 2:
-      makeZero(0);      
+      makeZero(0);
       makeTwo(1);
       break;
     case 3:
@@ -169,15 +169,15 @@ function clockTime() {
       makeFour(1);
       break;
     case 5:
-      makeZero(0);      
+      makeZero(0);
       makeFive(1);
       break;
     case 6:
-      makeZero(0);      
+      makeZero(0);
       makeSix(1)
       break;
     case 7:
-      makeZero(0);      
+      makeZero(0);
       makeSeven(1);
       break;
     case 8:
@@ -207,7 +207,7 @@ function clockTime() {
     case 14:
       makeOne(0);
       makeFour(1);
-      break;  
+      break;
     case 15:
       makeOne(0);
       makeFive(1);
@@ -223,7 +223,7 @@ function clockTime() {
     case 18:
       makeOne(0);
       makeEight(1);
-      break;  
+      break;
     case 19:
       makeOne(0);
       makeNine(1)
@@ -248,9 +248,9 @@ function clockTime() {
       makeTwo(0);
       makeFour(1);
       break;
-      
+
   }
-      
+
   switch(currentMinute) {
     case 0:
       makeZero(2);
@@ -261,7 +261,7 @@ function clockTime() {
       makeOne(3);
       break;
     case 2:
-      makeZero(2);      
+      makeZero(2);
       makeTwo(3);
       break;
     case 3:
@@ -273,15 +273,15 @@ function clockTime() {
       makeFour(3);
       break;
     case 5:
-      makeZero(2);      
+      makeZero(2);
       makeFive(3);
       break;
     case 6:
-      makeZero(2);      
+      makeZero(2);
       makeSix(3)
       break;
     case 7:
-      makeZero(2);      
+      makeZero(2);
       makeSeven(3);
       break;
     case 8:
@@ -303,7 +303,7 @@ function clockTime() {
     case 12:
       makeOne(2);
       makeTwo(3);
-      break;    
+      break;
     case 13:
       makeOne(2);
       makeThree(3);
@@ -313,7 +313,7 @@ function clockTime() {
       makeFour(3);
       break;
     case 15:
-      makeOne(2);      
+      makeOne(2);
       makeFive(3);
       break;
     case 16:
@@ -325,15 +325,15 @@ function clockTime() {
       makeSeven(3);
       break;
     case 18:
-      makeOne(2);      
+      makeOne(2);
       makeEight(3);
       break;
     case 19:
-      makeOne(2);      
+      makeOne(2);
       makeNine(3)
       break;
     case 20:
-      makeTwo(2);      
+      makeTwo(2);
       makeZero(3);
       break;
     case 21:
@@ -355,7 +355,7 @@ function clockTime() {
     case 25:
       makeTwo(2);
       makeFive(3);
-      break;   
+      break;
     case 26:
       makeTwo(2);
       makeSix(3);
@@ -375,123 +375,123 @@ function clockTime() {
     case 30:
       makeThree(2);
       makeZero(3);
-      break;   
+      break;
     case 31:
       makeThree(2);
       makeOne(3);
-      break; 
+      break;
     case 32:
       makeThree(2);
       makeTwo(3);
-      break; 
+      break;
     case 33:
       makeThree(2);
       makeThree(3);
-      break; 
+      break;
     case 34:
       makeThree(2);
       makeFour(3);
-      break; 
+      break;
     case 35:
       makeThree(2);
       makeFive(3);
-      break; 
+      break;
     case 36:
       makeThree(2);
       makeSix(3);
-      break; 
+      break;
     case 37:
       makeThree(2);
       makeSeven(3);
-      break; 
+      break;
     case 38:
       makeThree(2);
       makeEight(3);
-      break; 
+      break;
     case 39:
       makeThree(2);
       makeNine(3);
-      break; 
+      break;
     case 40:
       makeFour(2);
       makeZero(3);
-      break; 
+      break;
     case 41:
       makeFour(2);
       makeOne(3);
-      break; 
+      break;
     case 42:
       makeFour(2);
       makeTwo(3);
-      break; 
+      break;
     case 43:
       makeFour(2);
       makeThree(3);
-      break;  
+      break;
     case 44:
       makeFour(2);
       makeFour(3);
-      break; 
+      break;
     case 45:
       makeFour(2);
       makeFive(3);
-      break; 
+      break;
     case 46:
       makeFour(2);
       makeSix(3);
-      break; 
+      break;
     case 47:
       makeFour(2);
       makeSeven(3);
-      break;   
+      break;
     case 48:
       makeFour(2);
       makeEight(3);
-      break; 
+      break;
     case 49:
       makeFour(2);
       makeNine(3);
-      break; 
+      break;
     case 50:
       makeFive(2);
       makeZero(3);
-      break; 
+      break;
     case 51:
       makeFive(2);
       makeOne(3);
-      break;   
+      break;
     case 52:
       makeFive(2);
       makeTwo(3);
-      break; 
+      break;
     case 53:
       makeFive(2);
       makeThree(3);
-      break;   
+      break;
     case 54:
       makeFive(2);
       makeFour(3);
-      break; 
+      break;
     case 55:
       makeFive(2);
       makeFive(3);
-      break;   
+      break;
     case 56:
       makeFive(2);
       makeSix(3);
-      break; 
+      break;
     case 57:
       makeFive(2);
       makeSeven(3);
-      break; 
+      break;
     case 58:
       makeFive(2);
       makeEight(3);
-      break; 
+      break;
     case 59:
       makeFive(2);
       makeNine(3);
-      break;          
+      break;
   }
 
 switch(currentSecond) {
@@ -504,7 +504,7 @@ switch(currentSecond) {
       makeOne(5);
       break;
     case 2:
-      makeZero(4);      
+      makeZero(4);
       makeTwo(5);
       break;
     case 3:
@@ -516,15 +516,15 @@ switch(currentSecond) {
       makeFour(5);
       break;
     case 5:
-      makeZero(4);      
+      makeZero(4);
       makeFive(5);
       break;
     case 6:
-      makeZero(4);      
+      makeZero(4);
       makeSix(5)
       break;
     case 7:
-      makeZero(4);      
+      makeZero(4);
       makeSeven(5);
       break;
     case 8:
@@ -546,7 +546,7 @@ switch(currentSecond) {
     case 12:
       makeOne(4);
       makeTwo(5);
-      break;    
+      break;
     case 13:
       makeOne(4);
       makeThree(5);
@@ -556,7 +556,7 @@ switch(currentSecond) {
       makeFour(5);
       break;
     case 15:
-      makeOne(4);      
+      makeOne(4);
       makeFive(5);
       break;
     case 16:
@@ -568,15 +568,15 @@ switch(currentSecond) {
       makeSeven(5);
       break;
     case 18:
-      makeOne(4);      
+      makeOne(4);
       makeEight(5);
       break;
     case 19:
-      makeOne(4);      
+      makeOne(4);
       makeNine(5)
       break;
     case 20:
-      makeTwo(4);      
+      makeTwo(4);
       makeZero(5);
       break;
     case 21:
@@ -598,7 +598,7 @@ switch(currentSecond) {
     case 25:
       makeTwo(4);
       makeFive(5);
-      break;   
+      break;
     case 26:
       makeTwo(4);
       makeSix(5);
@@ -618,125 +618,125 @@ switch(currentSecond) {
     case 30:
       makeThree(4);
       makeZero(5);
-      break;   
+      break;
     case 31:
       makeThree(4);
       makeOne(5);
-      break; 
+      break;
     case 32:
       makeThree(4);
       makeTwo(5);
-      break; 
+      break;
     case 33:
       makeThree(4);
       makeThree(5);
-      break; 
+      break;
     case 34:
       makeThree(4);
       makeFour(5);
-      break; 
+      break;
     case 35:
       makeThree(4);
       makeFive(5);
-      break; 
+      break;
     case 36:
       makeThree(4);
       makeSix(5);
-      break; 
+      break;
     case 37:
       makeThree(4);
       makeSeven(5);
-      break; 
+      break;
     case 38:
       makeThree(4);
       makeEight(5);
-      break; 
+      break;
     case 39:
       makeThree(4);
       makeNine(5);
-      break; 
+      break;
     case 40:
       makeFour(4);
       makeZero(5);
-      break; 
+      break;
     case 41:
       makeFour(4);
       makeOne(5);
-      break; 
+      break;
     case 42:
       makeFour(4);
       makeTwo(5);
-      break; 
+      break;
     case 43:
       makeFour(4);
       makeThree(5);
-      break;  
+      break;
     case 44:
       makeFour(4);
       makeFour(5);
-      break; 
+      break;
     case 45:
       makeFour(4);
       makeFive(5);
-      break; 
+      break;
     case 46:
       makeFour(4);
       makeSix(5);
-      break; 
+      break;
     case 47:
       makeFour(4);
       makeSeven(5);
-      break;   
+      break;
     case 48:
       makeFour(4);
       makeEight(5);
-      break; 
+      break;
     case 49:
       makeFour(4);
       makeNine(5);
-      break; 
+      break;
     case 50:
       makeFive(4);
       makeZero(5);
-      break; 
+      break;
     case 51:
       makeFive(4);
       makeOne(5);
-      break;   
+      break;
     case 52:
       makeFive(4);
       makeTwo(5);
-      break; 
+      break;
     case 53:
       makeFive(4);
       makeThree(5);
-      break;   
+      break;
     case 54:
       makeFive(4);
       makeFour(5);
-      break; 
+      break;
     case 55:
       makeFive(4);
       makeFive(5);
-      break;   
+      break;
     case 56:
       makeFive(4);
       makeSix(5);
-      break; 
+      break;
     case 57:
       makeFive(4);
       makeSeven(5);
-      break; 
+      break;
     case 58:
       makeFive(4);
       makeEight(5);
-      break; 
+      break;
     case 59:
       makeFive(4);
       makeNine(5);
-      break;          
-  }  
-  
+      break;
+  }
+
 }
 clockTime()
 setInterval(clockTime, 1000)
