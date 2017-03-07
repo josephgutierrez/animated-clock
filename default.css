@@ -17,7 +17,7 @@ body {
   display: inline-block;
   width: 10px;
   height: 10px;
-  background-color: teal;
+  background-color: #3693d8;
   border-radius: 50%;
 }
 
@@ -111,6 +111,47 @@ body {
   background-color: #d3d3d3;
 }
 
+.picture {
+  position: absolute;
+  width: 260px;
+  height: 240px;
+  top: 50%;
+  left: 50%;
+  transform: translate(155%, -63%);
+}
+
+.picture-image {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: polygon(28% 0%, 100% 0%, 72% 100%, 0% 100%);
+  clip-path: polygon(28% 0%, 100% 0%, 72% 100%, 0% 100%);
+  background-color: #3693d8;
+}
+
+.frame {
+  position: absolute;
+  width: 260px;
+  height: 240px;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background-color: #d3d3d3;;
+}
+
+.picture-stand {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 0;
+  bottom: 0;
+  -webkit-clip-path: polygon(0 0, 36% 0, 100% 99%, 63% 100%);
+  clip-path: polygon(0 0, 36% 0, 100% 99%, 63% 100%);
+  background-color: #20252d;
+}
+
 .hours,
 .minutes,
 .seconds {
@@ -134,7 +175,6 @@ body {
   width: 50px;
   height: 120px;
 }
-
 .bar-one,
 .bar-two,
 .bar-three,
@@ -145,7 +185,7 @@ body {
   height: 65px;
   border-radius: 50px;
   transition: .5s ease-in;
-  background-color: teal;
+  background-color: #3693d8;
 }
 
 /* number one */
