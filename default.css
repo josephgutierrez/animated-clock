@@ -1,12 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 .container {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: radial-gradient(circle, black 35%, grey 70%, white 95%);
+  background: #f9f7ef;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: "Century Gothic";
   white-space: nowrap;
 }
 
@@ -14,7 +17,7 @@
   display: inline-block;
   width: 10px;
   height: 10px;
-  background-color: teal;
+  background-color: #3693d8;
   border-radius: 50%;
 }
 
@@ -22,13 +25,132 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  padding: 5px;
-  background-color: black;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  background-color: #20252d;
   font-size: 0;
   border-radius: 5px;
+  border: solid 15px #3f382d;
 }
 
+.stand {
+  position: absolute;
+  width: 66%;
+  height: 12%;
+  left: 50%;
+  top: 112%;
+  transform: translateX(-50%);
+  background-color: #20252d;
+}
+
+.button {
+  position: absolute;
+  top: -17%;
+  height: .4rem;
+  width: 1rem;
+  background-color: #20252d;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.button.left {
+  left: 42%;
+  transform: translateX(-50%);
+}
+
+.button.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button.right {
+  left: 58%;
+  transform: translateX(-50%);
+}
+
+.desk {
+  position: absolute;
+  top: 50%;
+  transform: translateY(110%);
+  width: 100%;
+  height: 80px;
+  background-color: #717375;
+}
+
+.lamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-300%, -82.4%);
+  height: 500px;
+}
+
+.lid {
+  width: 200px;
+  height: 200px;
+  -webkit-clip-path: polygon(60% 0, 69% 35%, 100% 100%, 0 100%, 31% 35%, 40% 0);
+  clip-path: polygon(60% 0, 69% 35%, 100% 100%, 0 100%, 31% 35%, 40% 0);
+  background-color: #d3d3d3;
+}
+
+.pole {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 270px;
+  background-color: #d3d3d3;
+}
+
+.base {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px 5px 0 0;
+  background-color: #d3d3d3;
+}
+
+.picture {
+  position: absolute;
+  width: 260px;
+  height: 240px;
+  top: 50%;
+  left: 50%;
+  transform: translate(155%, -63%);
+}
+
+.picture-image {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: polygon(28% 0%, 100% 0%, 72% 100%, 0% 100%);
+  clip-path: polygon(28% 0%, 100% 0%, 72% 100%, 0% 100%);
+  background-color: #3693d8;
+}
+
+.frame {
+  position: absolute;
+  width: 260px;
+  height: 240px;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background-color: #d3d3d3;;
+}
+
+.picture-stand {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 0;
+  bottom: 0;
+  -webkit-clip-path: polygon(0 0, 36% 0, 100% 99%, 63% 100%);
+  clip-path: polygon(0 0, 36% 0, 100% 99%, 63% 100%);
+  background-color: #20252d;
+}
 
 .hours,
 .minutes,
@@ -36,8 +158,11 @@
   display: inline-block;
   width: 120px;
   height: 120px;
-  margin: 5px;
-  background-color: black;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #20252d;
   text-align: center;
   vertical-align: middle;
   font-size: 0;
@@ -49,7 +174,6 @@
   width: 50px;
   height: 120px;
 }
-
 .bar-one,
 .bar-two,
 .bar-three,
@@ -57,11 +181,10 @@
 .bar-five {
   position: absolute;
   width: 7px;
-  height: 40px;
-  transform: translate(23px, 35px)rotate(90deg);
+  height: 65px;
   border-radius: 50px;
   transition: .5s ease-in;
-  background-color: teal;
+  background-color: #3693d8;
 }
 
 /* number one */
@@ -70,7 +193,6 @@
 .bar-three.one,
 .bar-four.one,
 .bar-five.one {
-  height: 65px;
   transform: translate(22px, 28px);
 }
 
@@ -324,9 +446,6 @@
   .hours,
   .minutes,
   .seconds {
-    margin: 0px;
-  }
-  .container {
-      background: radial-gradient(circle, black 50%, grey 80%, white 100%);
+    margin: 0;
   }
 }
