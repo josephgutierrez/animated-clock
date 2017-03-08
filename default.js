@@ -139,17 +139,13 @@ const hours = document.querySelector(".hours")
 const minutes = document.querySelector(".minutes")
 const seconds = document.querySelector(".seconds")
 
-// function clockTime() {
-//   const currentTime = new Date()
-//   let currentHour = currentTime.getHours()
+function clockTime() {
+  const currentTime = new Date()
+  let currentHour = currentTime.getHours()
   // currentHour = (currentHour > 12? currentHour - 12: currentHour)
-  // let currentMinute = currentTime.getMinutes()
-  // let currentSecond = currentTime.getSeconds()
+  let currentMinute = currentTime.getMinutes()
+  let currentSecond = currentTime.getSeconds()
   // console.log(currentHour + ":" + currentMinute + ":" + currentSecond)
-
-  let currentHour = 12
-  let currentMinute = 34
-  let currentSecond = 56
 
 
   switch(currentHour) {
@@ -742,6 +738,6 @@ switch(currentSecond) {
       break;
   }
 
-// }
-// clockTime()
-// setInterval(clockTime, 1000)
+}
+clockTime()
+setInterval(clockTime, 1000)

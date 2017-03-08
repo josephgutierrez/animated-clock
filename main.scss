@@ -187,8 +187,8 @@ body {
 .bar-four,
 .bar-five {
   position: absolute;
-  width: 14%;
-  height: 54.16%;
+  width: 7px;
+  height: 65px;
   border-radius: 50px;
   transition: .5s ease-in;
   background-color: $main-blue;
@@ -200,7 +200,7 @@ body {
 .bar-three.one,
 .bar-four.one,
 .bar-five.one {
-  transform: translate(315%, 43%);
+  transform: translate(22px, 28px);
 }
 
 .bar-two.one,
