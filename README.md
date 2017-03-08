@@ -4,3 +4,4 @@ Clock with animated numbers.
 
 ## Implementation
 - CSS transitions
+- Sass
