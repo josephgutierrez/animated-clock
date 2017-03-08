@@ -147,6 +147,7 @@ function clockTime() {
   let currentSecond = currentTime.getSeconds()
   // console.log(currentHour + ":" + currentMinute + ":" + currentSecond)
 
+
   switch(currentHour) {
     case 0:
       makeZero(0);

@@ -1,0 +1,458 @@
+$main-grey: #20252d;
+$main-blue: #3693d8;
+$main-brown: #3f382d;
+$main-silver: #d3d3d3;
+$background-color: #f9f7ef;
+$evolving-number: 50px;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: $background-color;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: $main-blue;
+  border-radius: 50%;
+}
+
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  background-color: $main-grey;
+  font-size: 0;
+  border-radius: 5px;
+  border: solid 15px $main-brown;
+}
+
+.stand {
+  position: absolute;
+  width: 66%;
+  height: 12%;
+  left: 50%;
+  top: 112%;
+  transform: translateX(-50%);
+  background-color: $main-grey;
+}
+
+.button {
+  position: absolute;
+  top: -17%;
+  height: .4rem;
+  width: 1rem;
+  background-color: $main-grey;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.button.left {
+  left: 42%;
+  transform: translateX(-50%);
+}
+
+.button.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button.right {
+  left: 58%;
+  transform: translateX(-50%);
+}
+
+.desk {
+  position: absolute;
+  top: 50%;
+  transform: translateY(110%);
+  width: 100%;
+  height: 80px;
+  background-color: #717375;
+}
+
+.lamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-300%, -82.4%);
+  height: 500px;
+}
+
+.lid {
+  width: 200px;
+  height: 200px;
+  -webkit-clip-path: polygon(60% 0, 69% 35%, 100% 100%, 0 100%, 31% 35%, 40% 0);
+  clip-path: polygon(60% 0, 69% 35%, 100% 100%, 0 100%, 31% 35%, 40% 0);
+  background-color: $main-silver;
+}
+
+.pole {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 270px;
+  background-color: $main-silver;
+}
+
+.base {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px 5px 0 0;
+  background-color: $main-silver;
+}
+
+.picture {
+  position: absolute;
+  width: 260px;
+  height: 240px;
+  top: 50%;
+  left: 50%;
+  transform: translate(155%, -63%);
+}
+
+.picture-image {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: polygon(28% 0%, 100% 0%, 72% 100%, 0% 100%);
+  clip-path: polygon(28% 0%, 100% 0%, 72% 100%, 0% 100%);
+  background-color: $main-blue;
+}
+
+.frame {
+  position: absolute;
+  width: 260px;
+  height: 240px;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background-color: $main-silver;;
+}
+
+.picture-stand {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 0;
+  bottom: 0;
+  -webkit-clip-path: polygon(0 0, 36% 0, 100% 99%, 63% 100%);
+  clip-path: polygon(0 0, 36% 0, 100% 99%, 63% 100%);
+  background-color: $main-grey;
+}
+
+.hours,
+.minutes,
+.seconds {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: $main-grey;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0;
+}
+
+.evolving-number {
+  position: relative;
+  display: inline-block;
+  width: $evolving-number;
+  height: $evolving-number * 2.4;
+}
+.bar-one,
+.bar-two,
+.bar-three,
+.bar-four,
+.bar-five {
+  position: absolute;
+  width: 7px;
+  height: 65px;
+  border-radius: 50px;
+  transition: .5s ease-in;
+  background-color: $main-blue;
+}
+
+/* number one */
+.bar-one.one,
+.bar-two.one,
+.bar-three.one,
+.bar-four.one,
+.bar-five.one {
+  transform: translate(22px, 28px);
+}
+
+.bar-two.one,
+.bar-three.one,
+.bar-four.one,
+.bar-five.one {
+  opacity: 0;
+}
+
+/* number two */
+.bar-one.two {
+  transform: translate(315%, 25%) rotate(-90deg);
+  height: 40px;
+}
+
+.bar-two.two {
+  transform: translate(22px, 70px) rotate(-90deg);
+  height: 40px;
+}
+
+.bar-three.two {
+  transform: translate(22px, 40px) rotate(-90deg);
+  height: 40px;
+}
+
+.bar-four.two {
+  transform: translate(39px, 27px);
+  height: 36px;
+}
+
+.bar-five.two {
+  transform: translate(5px, 57px);
+  height: 36px;
+}
+
+/* number three */
+.bar-one.three {
+  transform: translate(22px, 40px) rotate(-90deg);
+  height: 40px;
+}
+
+.bar-two.three {
+  transform: translate(39px, 57px);
+  height: 36px;
+}
+
+.bar-three.three {
+  transform: translate(39px, 27px);
+  height: 36px;
+}
+
+.bar-four.three {
+  transform: translate(22px, 10px) rotate(90deg);
+  height: 40px;
+}
+
+.bar-five.three {
+  transform: translate(22px, 70px) rotate(90deg);
+  height: 40px;
+}
+
+/* number four */
+.bar-one.four {
+  transform: translate(22px, 70px) rotate(-90deg);
+  height: 40px;
+  opacity: 0;
+}
+
+.bar-two.four {
+  transform: translate(39px, 27px);
+  height: 36px;
+}
+
+.bar-three.four {
+  transform: translate(22px, 40px) rotate(90deg);
+  height: 40px;
+}
+
+.bar-four.four {
+  transform: translate(5px, 27px) rotate(180deg);
+  height: 36px;
+}
+
+.bar-five.four {
+  transform: translate(39px, 57px) rotate(180deg);
+  height: 36px;
+}
+
+/* number five */
+.bar-one.five {
+  transform: translate(39px, 57px) rotate(0deg);
+  height: 36px;
+}
+
+.bar-two.five {
+  transform: translate(22px, 10px) rotate(90deg);
+  height: 40px;
+}
+
+.bar-three.five {
+  transform: translate(5px, 27px) rotate(180deg);
+  height: 36px;
+}
+
+.bar-four.five {
+  transform: translate(22px, 40px) rotate(270deg);
+  height: 40px;
+}
+
+.bar-five.five {
+  transform: translate(22px, 70px) rotate(-90deg);
+  height: 40px;
+}
+
+/* number six */
+.bar-one.six {
+  transform: translate(5px, 27px);
+  height: 65px;
+}
+
+.bar-two.six {
+  transform: translate(22px, 40px) rotate(270deg);
+  height: 40px;
+}
+
+.bar-three.six {
+  transform: translate(39px, 57px) rotate(0deg);
+  height: 36px;
+}
+
+.bar-four.six {
+  transform: translate(22px, 70px) rotate(90deg);
+  height: 40px;
+}
+
+.bar-five.six {
+  transform: translate(22px, 10px) rotate(90deg);
+  height: 40px;
+}
+
+/* number seven */
+.bar-one.seven {
+  transform: translate(22px, 10px) rotate(90deg);
+  height: 40px;
+}
+
+.bar-two.seven {
+  transform: translate(22px, 70px) rotate(90deg);
+  height: 40px;
+  opacity: 0;
+}
+
+.bar-three.seven {
+  transform: translate(22px, 70px) rotate(-90deg);
+  height: 40px;
+  opacity: 0;
+}
+
+.bar-four.seven {
+  transform: translate(39px, 27px) rotate(180deg);
+  height: 65px;
+}
+
+.bar-five.seven {
+  transform: translate(22px, 70px) rotate(270deg);
+  height: 40px;
+  opacity: 0;
+}
+
+/* number eight */
+.bar-one.eight {
+  transform: translate(39px, 27px) rotate(180deg);
+  height: 65px;
+}
+
+.bar-two.eight {
+  transform: translate(5px, 27px);
+  height: 65px;
+}
+
+.bar-three.eight {
+  transform: translate(22px, 10px) rotate(90deg);
+  height: 40px;
+}
+
+.bar-four.eight {
+  transform: translate(22px, 40px) rotate(90deg);
+  height: 40px;
+}
+
+.bar-five.eight {
+  transform: translate(22px, 70px) rotate(-270deg);
+  height: 40px;
+}
+
+/* number nine */
+.bar-one.nine {
+  transform: translate(5px, 27px) rotate(-180deg);
+  height: 36px;
+}
+
+.bar-two.nine {
+  transform: translate(22px, 40px) rotate(90deg);
+  height: 40px;
+}
+
+.bar-three.nine {
+  transform: translate(22px, 70px) rotate(-90deg);
+  height: 40px;
+  opacity: 0;
+}
+
+.bar-four.nine {
+  transform: translate(22px, 10px) rotate(-90deg);
+  height: 40px;
+}
+
+.bar-five.nine {
+  transform: translate(39px, 27px) rotate(-180deg);
+  height: 65px;
+}
+
+/* number zero */
+.bar-one.zero {
+  transform: translate(22px, 70px) rotate(-270deg);
+  height: 40px;
+}
+
+.bar-two.zero {
+  transform: translate(39px, 27px) rotate(180deg);
+  height: 65px;
+}
+
+.bar-three.zero {
+ transform: translate(21px, 27px) rotate(26deg);
+ height: 69px;
+}
+
+.bar-four.zero {
+  transform: translate(5px, 27px);
+  height: 65px;
+}
+
+.bar-five.zero {
+  transform: translate(22px, 10px) rotate(-90deg);
+  height: 40px;
+}
+
+@media (max-width: 800px) {
+  .hours,
+  .minutes,
+  .seconds {
+    margin: 0;
+  }
+}
