@@ -30,17 +30,17 @@ const removeNum = {
   0: ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 }
 
-function makeNum(num, addNum, removeNum) {
+function makeNum(num, addNum, ...removeNum) {
   barOne[num].classList.add(addNum)
-  barOne[num].classList.remove(removeNum)
+  barOne[num].classList.remove(...removeNum)
   barTwo[num].classList.add(addNum)
-  barTwo[num].classList.remove(removeNum)
+  barTwo[num].classList.remove(...removeNum)
   barThree[num].classList.add(addNum)
-  barThree[num].classList.remove(removeNum)
+  barThree[num].classList.remove(...removeNum)
   barFour[num].classList.add(addNum)
-  barFour[num].classList.remove(removeNum)
+  barFour[num].classList.remove(...removeNum)
   barFive[num].classList.add(addNum)
-  barFive[num].classList.remove(removeNum)
+  barFive[num].classList.remove(...removeNum)
 }
 
 const hours = document.querySelector(".hours")
@@ -50,31 +50,28 @@ const seconds = document.querySelector(".seconds")
 function clockTime() {
   const currentTime = new Date()
   let currentHour = currentTime.getHours()
-  // For 12 hour time use currentHour = (currentHour > 12? currentHour - 12: currentHour)
   let currentMinute = currentTime.getMinutes()
   let currentSecond = currentTime.getSeconds()
 
   const hour = (hr) => {
     hr = hr > 9 ? hr : "0" + hr;
     hr = hr.toString().split('')
-    makeNum(0, addNum[hr[0]], removeNum[hr[0]].join(','))
-    makeNum(1, addNum[hr[1]], removeNum[hr[1]].join(','))
+    makeNum(0, addNum[hr[0]], ...removeNum[hr[0]])
+    makeNum(1, addNum[hr[1]], ...removeNum[hr[1]])
   }
 
   const minute = (min) => {
     min = min > 9 ? min : "0" + min;
     min = min.toString().split('')
-    makeNum(2, addNum[min[0]], removeNum[min[0]].join(','))
-    makeNum(3, addNum[min[1]], removeNum[min[1]].join(','))
+    makeNum(2, addNum[min[0]], ...removeNum[min[0]])
+    makeNum(3, addNum[min[1]], ...removeNum[min[1]])
   }
 
   const second = (sec) => {
     sec = sec > 9 ? sec : "0" + sec;
     sec = sec.toString().split('')
-    console.log(.apply(removeNum[sec[0]])
-    console.log(removeNum[sec[1]]
-    makeNum(4, addNum[sec[0]], removeNum[sec[0]].map(num => `'${num}'`).join(','))
-    makeNum(5, addNum[sec[1]], removeNum[sec[1]].map(num => `'${num}'`).join(','))
+    makeNum(4, addNum[sec[0]], ...removeNum[sec[0]])
+    makeNum(5, addNum[sec[1]], ...removeNum[sec[1]])
   }
 
   hour(currentHour)
